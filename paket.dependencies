@@ -1,33 +1,39 @@
-framework: net45
+framework: net6
 redirects: on
-source https://www.nuget.org/api/v2
 
-nuget MBrace.Core ~> 1.5.2
-nuget MBrace.Flow ~> 1.5.2
-nuget MBrace.CSharp ~> 1.5.2 prerelease
-nuget MBrace.Thespian ~> 1.5.2
-nuget MBrace.Runtime ~> 1.5.2
-nuget MBrace.Azure ~> 1.5.5
-nuget MBrace.Azure.Management ~> 1.5.5
-nuget MBrace.AWS 0.1.10-alpha
-nuget Streams
-nuget Suave ~> 1.1.3
-nuget AForge
-nuget AForge.Imaging
-nuget AForge.Math
-nuget MathNet.Numerics ~> 3.7.0
-nuget MathNet.Numerics.FSharp ~> 3.7.0
-nuget MathNet.Numerics.MKL.Win-x64 ~> 1.8.0
-nuget System.Runtime.Loader
-nuget FSharp.Data ~> 2.0
-nuget FSharp.Charting
-nuget FSharp.Control.AsyncSeq
-nuget XPlot.GoogleCharts ~> 1.2
-nuget XPlot.GoogleCharts.WPF
-nuget RProvider
+source https://api.nuget.org/v3/index.json
+nuget FSharp.DependencyManager.Paket
 
-nuget Owin version_in_path: true
-nuget Microsoft.Owin version_in_path: true
-nuget Microsoft.Owin.Host.SystemWeb
+source https://www.myget.org/F/aggieben/api/v3/index.json
+nuget MBrace.Core ~> 1.6.0-alpha.2 prerelease
+nuget MBrace.Flow ~> 1.6.0-alpha.2 prerelease
+nuget MBrace.CSharp ~> 1.6.0-alpha.2 prerelease
+nuget MBrace.Thespian ~> 1.6.0-alpha.2 prerelease
+nuget MBrace.Runtime ~> 1.6.0-alpha.2 prerelease
 
-github fslaborg/FSharp.Charting docs/content/EventEx-0.1.fsx
+
+# nuget MBrace.Azure
+# nuget MBrace.Azure.Management
+# nuget MBrace.AWS
+# nuget Streams
+# nuget Suave
+# nuget AForge
+# nuget AForge.Imaging
+# nuget AForge.Math
+# nuget MathNet.Numerics
+# nuget MathNet.Numerics.FSharp
+# nuget MathNet.Numerics.MKL.Win-x64
+# nuget System.Runtime.Loader
+# nuget FSharp.Data
+# nuget FSharp.Charting
+# nuget FSharp.Control.AsyncSeq
+# nuget XPlot.GoogleCharts
+# nuget XPlot.GoogleCharts.WPF
+# nuget RProvider
+
+# nuget Owin version_in_path: true
+# nuget Microsoft.Owin version_in_path: true
+# nuget Microsoft.Owin.Host.SystemWeb
+
+
+# github fslaborg/FSharp.Charting docs/content/EventEx-0.1.fsx

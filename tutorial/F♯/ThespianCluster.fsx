@@ -1,10 +1,12 @@
-﻿#I __SOURCE_DIRECTORY__
-#I "../packages/MBrace.Thespian/tools"
-#I "../packages/Streams/lib/netstandard2.0"
-#r "../packages/Streams/lib/netstandard2.0/Streams.dll"
-#I "../packages/MBrace.Flow/lib/net45"
-#r "../packages/MBrace.Flow/lib/net45/MBrace.Flow.dll"
-#load "../packages/MBrace.Thespian/MBrace.Thespian.fsx"
+﻿// #I __SOURCE_DIRECTORY__
+// #I "../packages/MBrace.Thespian/tools"
+// #I "../packages/Streams/lib/netstandard2.0"
+// #r "../packages/Streams/lib/netstandard2.0/Streams.dll"
+// #I "../packages/MBrace.Flow/lib/net45"
+// #r "../packages/MBrace.Flow/lib/net45/MBrace.Flow.dll"
+// #load "../packages/MBrace.Thespian/MBrace.Thespian.fsx"
+#r "paket: nuget MBrace.Flow ~> 1.6.0-alpha.2 prerelease"
+#r "paket: nuget MBrace.Thespian ~> 1.6.0-alpha.2"
 
 namespace global
 
@@ -18,6 +20,10 @@ module Config =
     let private workerCount = 4
 
     let mutable private thespian = None
+
+    do
+        ThespianWorker.LocalExecutable <- (__SOURCE_DIRECTORY__ + "/../../../MBrace.Core/src/MBrace.Thespian.Worker/bin/Debug/net6/mbrace.thespian.worker.exe")
+
     /// Gets or creates a new Thespian cluster session.
     let GetCluster() =
         match thespian with
